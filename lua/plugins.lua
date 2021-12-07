@@ -23,7 +23,7 @@ end
 require("packer").startup {
   function(use)
     use "wbthomason/packer.nvim"
-    use "lewis6991/impatient.nvim"
+    -- use "lewis6991/impatient.nvim"
 
     --= LSP =--
     use "neovim/nvim-lspconfig"
@@ -47,16 +47,16 @@ require("packer").startup {
     }
 
     -- Menu
-    use {
-      "gelguy/wilder.nvim",
-      requires = {
-        "roxma/nvim-yarp",
-        "roxma/vim-hug-neovim-rpc"
-      }
-    }
+    -- use {
+    --   "gelguy/wilder.nvim",
+    --   requires = {
+    --     "roxma/nvim-yarp",
+    --     "roxma/vim-hug-neovim-rpc"
+    --   }
+    -- }
 
-    -- Latex
-    use "lervag/vimtex"
+    -- -- Latex
+    -- use "lervag/vimtex"
 
     -- Rooter
     use "airblade/vim-rooter"
@@ -82,7 +82,7 @@ require("packer").startup {
     use "tpope/vim-repeat"
 
     --= Practice (temp) =--
-    use "ThePrimeagen/vim-be-good"
+    --use "ThePrimeagen/vim-be-good"
 
     --= Neovim Lua Lsp =--
     use "tjdevries/nlua.nvim"
@@ -103,7 +103,7 @@ require("packer").startup {
     use "windwp/nvim-autopairs"
 
     --= Startup Time =--
-    use {"dstein64/vim-startuptime", cmd = "StartupTime"}
+    --use {"dstein64/vim-startuptime", cmd = "StartupTime"}
 
     --= BufDelete =--
     use "famiu/bufdelete.nvim"
@@ -164,19 +164,11 @@ require("packer").startup {
     -- Github Theme
     use "projekt0n/github-nvim-theme"
 
-    --= Experimental =--
     -- Rainbow
     use "p00f/nvim-ts-rainbow"
 
     -- Hop
     use "phaazon/hop.nvim"
 
-    -- Filetype Shit (Might break alot)
-    use {
-      "nathom/filetype.nvim",
-      config = function()
-        require("filetype").setup({})
-      end
-    }
   end
 }
